@@ -1,0 +1,135 @@
+/*var*/
+$color-gray: gray;
+$color-green: #006666;
+$color-light-green:#009999;
+$color-white: white;
+$color-btn-participar: green;
+$color-container: #dddddd;
+$margin-text: 30px 100px;
+$padding-itens:10px 10px;
+
+/*large screen*/
+header, nav, section, aside{
+  display:flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/*small screen*/
+@media all and (max-with: 500px){
+
+  header, nav, section, aside{
+    flex-direction: column;
+  }
+
+  header a{
+    display:none;
+  }
+
+}
+
+/*style header, nav*/
+header{
+  padding: $padding-itens;
+
+  a {
+    text-decoration: none;
+    color: $color-gray;
+    padding: $padding-itens;
+  }
+}
+
+nav {
+  background-color: $color-green;
+  overflow: hidden;
+  
+  div{
+    border-right: 1px #66ccff solid;
+    padding: $padding-itens;   
+
+    a{
+      text-decoration: none;
+      color: $color-white;
+      display: block;
+      font-size: 17px;
+    }  
+  }
+}
+ 
+/*style main*/
+.container-1{
+  background-color: $color-container;
+
+  div{
+    padding: $padding-itens;
+    text-align: left;
+    width: 400px;
+  }
+
+  form{
+    border:2px solid $color-gray;
+    background-color: $color-white;
+    padding: $padding-itens;
+    color: $color-gray;
+
+    input{
+      width:100%;
+      margin-bottom: 20px;
+    }
+  
+    input[name="mensalidade"]{
+      width:20%;
+    }
+    
+    input[name="curso"]{
+        width:30%;
+      
+    }
+    input[type="button"]{
+
+      height: 35px;
+      background-color: $color-btn-participar;
+      color: $color-white;
+    
+     }
+  }
+}
+
+.container-2 div {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding:10px;
+  float:left;
+  
+  input[name="e-mail"], input[name="endereco"] {
+    width: 80%;
+    color: $color-gray;
+    margin-bottom: 10px;
+  }
+}
+
+#intro{
+  margin: $margin-text;
+
+}
+
+#intro2{
+  margin: $margin-text;
+  border-bottom: 1px solid $color-gray;  
+}
+
+/*style aside*/
+
+aside{
+  background-color: $color-light-green;
+
+  a{
+    text-decoration: none;
+    color:$color-white ;
+    padding:30px;
+    display: block;
+
+  }
+}
+
